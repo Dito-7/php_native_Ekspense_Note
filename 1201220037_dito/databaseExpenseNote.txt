@@ -1,0 +1,41 @@
+CREATE TABLE pengguna_ekspense (
+    pengguna_id INT AUTO_INCREMENT,
+    name VARCHAR(50),
+    username VARCHAR(50),
+    Gmail VARCHAR(50),
+    phone VARCHAR(15),
+    password VARCHAR(50),
+    confirm VARCHAR(50),
+    role ENUM("USER", "ADMIN") DEFAULT 'USER',
+    saldo INT DEFAULT 0,
+    status VARCHAR(10) DEFAULT 'aktif',
+    CONSTRAINT pk_pengguna_id PRIMARY KEY (pengguna_id)
+);
+
+
+CREATE TABLE pengeluaran (
+    pengeluaran_id int(10) AUTO_INCREMENT,
+    pengguna_id int(10),
+    kategori_id int(10),
+    jumlah_pengeluaran int(10),
+    keterangan VARCHAR(255),
+    tanggal_pengeluaran DATE,
+    CONSTRAINT pk_pengeluaran_id PRIMARY KEY (pengeluaran_id),
+    CONSTRAINT fk_pengeluaran_pengguna FOREIGN KEY (pengguna_id) REFERENCES pengguna_ekspense (pengguna_id),
+    CONSTRAINT fk_pengeluaran_kategori FOREIGN KEY (kategori_id) REFERENCES master_kategori (kategori_id)
+);
+
+CREATE TABLE catatan (
+    catatan_id int(10) AUTO_INCREMENT,
+    pengguna_id int(10),
+    catatan VARCHAR(255),
+    tanggal_catatan DATE,
+    CONSTRAINT pk_catatan_id PRIMARY KEY (catatan_id),
+    CONSTRAINT fk_catatan_pengguna FOREIGN KEY (pengguna_id) REFERENCES pengguna_Ekspense (pengguna_id)
+);
+
+CREATE TABLE master_kategori(
+    kategori_id int(10),
+    nama_kategori varchar(50),
+    CONSTRAINT pk_kategori_id PRIMARY KEY (kategori_id)
+);

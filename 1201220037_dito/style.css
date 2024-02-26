@@ -1,0 +1,525 @@
+body {
+    /* background-image: url('./Asset/bggg.png'); */
+    /* background-color: #c8d8ed; */
+    /* color: #636363; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.menu {
+    display: flex;
+    /* kenapa pake flex? karena parentnya pada div menu jadi contentnya akan menyesuaikan parent menjadi datar*/
+    font-size: 20px;
+    /* border: 1px solid black; */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    align-items: center;
+}
+
+.menu ul li {
+    display: inline-block;
+    padding-left: 10px;
+    /* margin-top: 20px; */
+    /* border: 1px solid black; */
+    font-size: 17px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #636363;
+    position: relative;
+}
+
+.saldo {
+    color: #636363;
+    font-size: 17px;
+    margin-right: 100px;
+}
+
+.menu a:hover {
+    color: #213555;
+    font-size: 18px;
+    border-radius: 5px;
+    /* untuk transisiton pas hover */
+    transition: 0.5s ease;
+    text-decoration: underline;
+    cursor: pointer;
+    /* pointer ini adalah menambahkan ikon tangan saat ingin klik hobvernya */
+}
+
+/* bagian ini untuk jika kita memencet salah satu menunya maka akan tetap berwarna */
+#dash {
+    color: #213555;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#pengeluaran {
+    color: #213555;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#catatanpribadi {
+    color: #213555;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu li {
+    margin-right: 30px;
+}
+
+.menu ul {
+    /* margin-right: 300px; */
+    /* border: 1px solid black; */
+    flex-grow: 1;
+    /* ini agar jika kit hover navbar maka elemen lain tidak bergerak jadi flexgrow memenuhi ruang elemen ul*/
+}
+
+.logo h2 {
+    margin-left: -98px;
+    margin-right: 280px;
+    font-size: 25px;
+    /* border: 1px solid black; */
+    /* margin-top: 35px; */
+}
+
+.logo {
+    display: flex;
+    /* border: 1px solid black; */
+    /* padding-left: 100px; */
+}
+
+.menu .logo img {
+    margin-left: 100px;
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.menu img {
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+    /* border: 1px solid black; */
+    margin-right: 100px;
+    background-color: #f5f5f5;
+    border-radius: 40px;
+}
+
+.menu img:hover {
+    background-color: transparent;
+    transition: 0.5s ease;
+}
+
+.menu .akun {
+    display: flex;
+    font-size: 11px;
+    /* border: 1px solid black; */
+    /* width: 150%; */
+    align-items: center;
+    margin-right: 50px;
+}
+
+.menu .akun #signIn {
+    padding: 10px;
+}
+
+.akun #signUp {
+    background-color: #000000;
+    border-radius: 40px;
+    color: #fff;
+    padding: 10px;
+}
+
+.dashboard img {
+    /* border: 1px solid black; */
+    max-width: 50%;
+    margin-right: 61px;
+    margin-left: 99px;
+}
+
+.dash {
+    /* border: 1px solid black; */
+    /* margin-left: 15%; */
+    width: 40%;
+}
+
+.dash h2 {
+    font-size: 64px;
+}
+
+.dash p {
+    font-size: 14px;
+    opacity: 40%;
+    /* text-align: justify; */
+}
+
+.dashboard {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid black; */
+    margin-bottom: 7.5%;
+    margin-top: 100px;
+}
+
+.dash button {
+    padding: 20px;
+    font-size: 25px;
+    background-color: #E5D283;
+    border-radius: 40px;
+    margin-top: 20px;
+    border: none;
+}
+
+.dashboard img.arrow {
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+.dash button:hover {
+    background: #E5D283;
+    border-radius: 40px;
+    box-shadow: 0 0 5px #E5D283,
+        0 0 25px #E5D283,
+        0 0 50px #E5D283,
+        0 0 100px #E5D283;
+    transition: 0.5s ease;
+}
+
+.h2Mid {
+    font-size: 40px;
+    text-align: center;
+    width: 55%;
+    margin: auto;
+}
+
+.h1Mid {
+    text-align: center;
+    font-size: 50px;
+}
+
+.ulMid {
+    display: flex;
+    justify-content: center;
+}
+
+.ulMid ul {
+    list-style: none;
+    width: 40%;
+}
+
+.ulMid ul li {
+    background-color: #eaeaea75;
+    border-radius: 30px;
+    padding: 50px;
+    margin-top: 20px;
+}
+
+.ulMid p {
+    opacity: 50%;
+}
+
+.ulMid img {
+    width: 10%;
+    max-width: 100%;
+    height: auto;
+}
+
+.footDash {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    border-radius: 30px;
+    color: white;
+    width: 79%;
+    margin: auto;
+    padding: 50px;
+}
+
+.footDash ul {
+    list-style: none;
+    width: 40%;
+}
+
+.footDash h2 img {
+    width: 9%;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.footDash img.sosmed {
+    margin-top: 30px;
+}
+
+.footDash p {
+    width: 60%;
+    opacity: 50%;
+}
+
+.footDash li {
+    margin-top: 20px;
+    /* opacity: 50%; */
+}
+
+.pengeluaran {
+    margin: auto;
+    /* border: 1px solid black; */
+    width: 70%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.catatanpribadi {
+    margin: auto;
+    /* border: 1px solid black; */
+    width: 70%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.pengeluaran label {
+    text-align: start;
+    margin-left: 200px;
+}
+
+.catatanpribadi label {
+    text-align: start;
+    margin-left: 200px;
+}
+
+#tanggal_pengeluaran {
+    visibility: hidden;
+}
+
+#tanggal_catatan {
+    visibility: hidden;
+}
+
+form .kotak_input {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+form .kotak_input select {
+    width: 61.5%;
+    padding: 10px;
+    font-size: 30px;
+}
+
+/* .bulanan form .kotak_input select {
+    width: 30.5%;
+    padding: 10px;
+    font-size: 30px;
+} */
+
+form input,
+form select,
+form textarea {
+    width: 60%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 10px 10px 8px rgba(191, 191, 191, 0.403);
+    background-color: #d5d5d7;
+}
+
+form button {
+    padding: 10px;
+    font-size: 25px;
+    background-color: #E5D283;
+    color: #213555;
+    border-radius: 13px;
+    margin-top: 20px;
+    border: none;
+}
+
+.pengeluaran button:hover {
+    background: #E5D283;
+    color: #fff;
+    border-radius: 13px;
+    box-shadow: 0 0 5px #E5D283,
+        0 0 25px #E5D283,
+        0 0 50px #E5D283,
+        0 0 100px #E5D283;
+    transition: 0.5s ease;
+}
+
+/* .bulanan button:hover {
+    background: #E5D283;
+    color: #fff;
+    border-radius: 13px;
+    box-shadow: 0 0 5px #E5D283,
+        0 0 25px #E5D283,
+        0 0 50px #E5D283,
+        0 0 100px #E5D283;
+    transition: 0.5s ease;
+} */
+
+.catatanpribadi button:hover {
+    background: #E5D283;
+    color: #fff;
+    border-radius: 13px;
+    box-shadow: 0 0 5px #E5D283,
+        0 0 25px #E5D283,
+        0 0 50px #E5D283,
+        0 0 100px #E5D283;
+    transition: 0.5s ease;
+}
+
+.history h3 {
+    font-size: 35px;
+    /* border: 1px solid black; */
+}
+
+/* .bulanan h3 {
+    font-size: 35px;
+    border: 1px solid black;
+} */
+
+.history_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.history_table th,
+.history_table td {
+    border: 2px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.history_table th {
+    background-color: #f2f2f2;
+}
+
+.history_table {
+    background-color: #dadada;
+}
+
+.history_table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.total {
+    margin-top: 100px;
+    padding: 40px;
+    border-radius: 30px;
+    background-color: #000000;
+    width: 20%;
+    color: white;
+    display: inline-block;
+}
+
+/* .filterHistori li {
+    padding: 15px;
+    border-radius: 30px;
+    display: inline-block;
+    list-style: none;
+} */
+
+.profilePage {
+    width: 50%;
+    margin: auto;
+}
+
+.profilePersonal {
+    background-color: #cacaca57;
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 100px;
+}
+
+.profilePersonal h2 {
+    text-align: center;
+    margin-right: 100px;
+}
+
+.profilePersonal #PersonalImg {
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-right: 140px;
+}
+
+.profilePersonal #logout {
+    float: right;
+    width: 7%;
+}
+
+.profilePersonal #logout:hover {
+    transition: 0.5s ease;
+    width: 9%;
+}
+
+.profilePersonal ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.profilePersonal li {
+    padding-right: 100px;
+    margin: 20px;
+}
+
+.profilePersonal li input {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: #cacaca00;
+}
+
+.profilePersonal hr {
+    margin: 0;
+}
+
+.profilePersonal .buttonPlace {
+    text-align: center;
+    margin-right: 100px;
+}
+
+.profilePersonal button {
+    padding: 10px 35px;
+    font-size: 25px;
+    background-color: #E5D283;
+    border-radius: 40px;
+    border: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.profilePersonal button:hover {
+    background: #E5D283;
+    color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 5px #E5D283,
+        0 0 25px #E5D283,
+        0 0 50px #E5D283,
+        0 0 100px #E5D283;
+    transition: 0.5s ease;
+}
+
+.profilePersonal label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer {
+    /* border: 1px solid black; */
+    /* border-top: 1px solid black; */
+    padding: 10px;
+    text-align: center;
+}
